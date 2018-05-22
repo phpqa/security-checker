@@ -4,7 +4,7 @@ ARG COMPOSER_IMAGE="composer:1.6.4"
 ARG BASE_IMAGE="php:7.2-alpine"
 ARG PACKAGIST_NAME="sensiolabs/security-checker"
 ARG PHPQA_NAME="security-checker"
-ARG VERSION="XXX"
+ARG VERSION="4.1.8"
 
 # Download with Composer - https://getcomposer.org/
 
