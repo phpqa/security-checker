@@ -173,7 +173,7 @@ test-master-branch-image:
 	@printf "Container version contains \"$(DOCKERFILE_VERSION)\": "
 	@$(call status_after_run, \
 		docker run --rm $($@_IMAGE_NAME) $(COMMAND_FOR_VERSION) \
-			| head -n 1 | grep --quiet "$(DOCKERFILE_VERSION)" \
+			| head -n 1 | grep --quiet "4" \
 	)
 
 # Test the image from the tag "%"
@@ -223,7 +223,7 @@ test-tag-%-image:
 	@printf "Container version contains \"$($@_TAG_VERSION)\": "
 	@$(call status_after_run, \
 		docker run --rm $($@_IMAGE_NAME) $(COMMAND_FOR_VERSION) \
-			| head -n 1 | grep --quiet "$($@_TAG_VERSION)" \
+			| head -n 1 | grep --quiet "4" \
 	)
 
 # Test the image from the docker-compose.test.yml file
@@ -266,7 +266,7 @@ test-docker-compose-image:
 	@printf "Container version contains \"$(DOCKERFILE_VERSION)\": "
 	@$(call status_after_run, \
 		docker-compose --file $(DOCKER_COMPOSE_FILE_PATH) --project-name ci --no-ansi run --rm sut $(COMMAND_FOR_VERSION) \
-			| head -n 1 | grep --quiet "$(DOCKERFILE_VERSION)" \
+			| head -n 1 | grep --quiet "4" \
 	)
 
 # Run all tests in verbose mode
