@@ -3,7 +3,9 @@ set -e
 
 isCommand() {
   for cmd in \
-    "XXX"
+    "help" \
+    "list" \
+    "security:check"
   do
     if [ -z "${cmd#"$1"}" ]; then
       return 0
