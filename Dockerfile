@@ -3,7 +3,7 @@
 ARG BASE_IMAGE="php:7.2-alpine"
 ARG PACKAGIST_NAME="sensiolabs/security-checker"
 ARG PHPQA_NAME="security-checker"
-ARG VERSION="4.1.8"
+ARG VERSION="5.0.3"
 
 # Build image
 
